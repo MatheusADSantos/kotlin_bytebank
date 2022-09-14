@@ -1,62 +1,66 @@
 fun main() {
     println("Bem vindo ao Bytebank")
 
-    val contaMatheus = Conta()
-    contaMatheus.titular = "Matheus"
-    contaMatheus.numero = 1000
-    contaMatheus.setSaldo(200.0)
+    val contaMatheus = Conta("Matheus", 1000)
+    contaMatheus.deposita(200.0)
 
-    val contaFran = Conta()
-    contaFran.titular = "Fran"
-    contaFran.numero = 1001
-    contaFran.setSaldo(300.0)
+    val contaFran = Conta("Fran", 1001)
+    contaFran.deposita(300.0)
 
 
-    println(contaMatheus.getSaldo())
+    println(contaMatheus.saldo)
 
     println("depositando na conta do Matheus")
     contaMatheus.deposita(50.0)
-    println(contaMatheus.getSaldo())
+    println(contaMatheus.saldo)
 
     println("depositando na conta da Fran")
     contaFran.deposita(70.0)
-    println(contaFran.getSaldo())
+    println(contaFran.saldo)
 
-//    println("sacando na conta do Matheus")
-//    contaMatheus.saca(250.0)
-//    println(contaMatheus.getSaldo())
-//
-//    println("sacando na conta da Fran")
-//    contaFran.saca(100.0)
-//    println(contaFran.getSaldo())
-//
-//    println("saque em excesso na conta do Matheus")
-//    contaMatheus.saca(100.0)
-//    println(contaMatheus.getSaldo())
-//
-//    println("saque em excesso na conta da Fran")
-//    contaFran.saca(500.0)
-//    println(contaFran.getSaldo())
+    println("sacando na conta do Matheus")
+    contaMatheus.saca(250.0)
+    println(contaMatheus.saldo)
 
-//    println("Transferência da conta da Fran para o Matheus")
-//
-//    if(contaFran.transfere(300.0, contaMatheus)){
-//        println("Transferência sucedida")
-//    } else {
-//        println("Falha na transferência")
-//    }
-//
-//    println(contaMatheus.getSaldo())
-//    println(contaFran.getSaldo())
+    println("sacando na conta da Fran")
+    contaFran.saca(100.0)
+    println(contaFran.saldo)
+
+    println("saque em excesso na conta do Matheus")
+    contaMatheus.saca(100.0)
+    println(contaMatheus.saldo)
+
+    println("saque em excesso na conta da Fran")
+    contaFran.saca(500.0)
+    println(contaFran.saldo)
+
+    println("Transferência da conta da Fran para o Matheus")
+
+    if(contaFran.transfere(300.0, contaMatheus)){
+        println("Transferência sucedida")
+    } else {
+        println("Falha na transferência")
+    }
+
+    println(contaMatheus.saldo)
+    println(contaFran.saldo)
 }
 
-class Conta {
-    var titular = ""
-    var numero = 0
-    private var saldo = 0.0
+class Conta(
+    var titular: String,
+    var numero: Int
+) {
+    var saldo = 0.0
+        private set
+
+    init {
+        // Executa algo durante a construção
+    }
 
     fun deposita(valor: Double) {
-        saldo += valor
+        if (valor > 0) {
+            this.saldo += valor
+        }
     }
 
     fun saca(valor: Double) {
@@ -73,16 +77,6 @@ class Conta {
         }
         return false
     }
-
-    fun getSaldo(): Double {
-        return saldo
-    }
-
-    fun setSaldo(valor: Double) {
-        if (valor > 0) {
-            saldo = valor
-        }
-    }
 }
 
 fun testaCopiasEReferencias() {
@@ -93,11 +87,8 @@ fun testaCopiasEReferencias() {
     println("numeroX $numeroX")
     println("numeroY $numeroY")
 
-    val contaJoao = Conta()
-    contaJoao.titular = "João"
-    var contaMaria = Conta()
-    contaMaria.titular = "Maria"
-    contaJoao.titular = "João"
+    val contaJoao = Conta("João", 1002)
+    var contaMaria = Conta("Maria", 1003)
 
     println("titular conta joao: ${contaJoao.titular}")
     println("titular conta maria: ${contaMaria.titular}")
