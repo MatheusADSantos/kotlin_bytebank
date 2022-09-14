@@ -47,8 +47,8 @@ fun main() {
 }
 
 class Conta(
-    var titular: String,
-    var numero: Int
+    val titular: String,
+    val numero: Int
 ) {
     var saldo = 0.0
         private set
