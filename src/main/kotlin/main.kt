@@ -34,4 +34,10 @@ fun main() {
     } else {
         println("Falha na Autenticação")
     }
+
+    var calculadora = CalculadoraBonificacao()
+    calculadora.registra(matheus)
+    calculadora.registra(fran)
+    calculadora.registra(gui)
+    println("Total Bionificação: ${calculadora.total}")
 }
