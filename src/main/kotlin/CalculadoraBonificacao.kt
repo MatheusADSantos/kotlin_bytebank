@@ -6,11 +6,4 @@ class CalculadoraBonificacao {
         total += funcionario.bonificacao
     }
 
-    fun registra(gerente: Gerente) {
-        total += gerente.bonificacao
-    }
-
-    fun registra(diretor: Diretor) {
-        total += diretor.bonificacao
-    }
 }
