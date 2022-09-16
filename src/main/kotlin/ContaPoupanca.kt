@@ -1,13 +1,1 @@
-class ContaPoupanca(
-    titular: String,
-    numero: Int
-) : Conta(
-    titular = titular,
-    numero = numero
-) {
-    override fun saca(valor: Double) {
-        if (valor <= saldo) {
-            saldo -= valor
-        }
-    }
-}
+class ContaPoupanca(titular: String, numero: Int) : ContaTransferivel(titular = titular, numero = numero)
