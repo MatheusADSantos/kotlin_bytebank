@@ -1,46 +1,28 @@
 fun main() {
-    println("Bem vindo ao Bytebank")
+    println("Bem vindo ao Bytebank\n\n")
 
-    val matheus = Funcionario(nome = "Matheus", cpf = "111.111.111-11", salario = 1000.0)
+    val contaPoupanca = ContaPoupanca("Matheus", 1000)
+    val contaCorrente = ContaCorrente("Matheus", 1000)
 
-    println("nome ${matheus.nome}")
-    println("cpf ${matheus.cpf}")
-    println("salario ${matheus.salario}")
-    println("bonificação ${matheus.bonificacao}")
+    println("\nDepositando nas contas ...")
+    contaPoupanca.deposita(1000.0)
+    println("Saldo Pop: ${contaPoupanca.saldo}")
+    contaCorrente.deposita(1000.0)
+    println("Saldo CC: ${contaCorrente.saldo}")
 
-    val fran = Gerente(nome = "Fran", cpf = "222.222.222-22", salario = 2000.0, senha = 123)
+    println("\nSacando ...")
+    contaPoupanca.saca(100.0)
+    println("Saldo Pop(pós saque): ${contaPoupanca.saldo}")
+    contaCorrente.saca(100.0)
+    println("Saldo CC(pós saque): ${contaCorrente.saldo}")
 
-    println("nome ${fran.nome}")
-    println("cpf ${fran.cpf}")
-    println("salario ${fran.salario}")
-    println("bonificação ${fran.bonificacao}")
+    println("\nTransferindo de Pop -> CC")
+    contaPoupanca.transfere(100.0, contaCorrente)
+    println("Saldo Pop(pós transf.): ${contaPoupanca.saldo}")
+    println("Saldo CC(pós transf.): ${contaCorrente.saldo}")
 
-    if (fran.autenticacao(senha = 123)) {
-        println("Autenticado com Sucesso!")
-    } else {
-        println("Falha na Autenticação")
-    }
-
-    val gui = Diretor(nome = "Gui", cpf = "333.333.333-33", salario = 4000.0, senha = 4000, plr = 200.0)
-
-    println("nome ${gui.nome}")
-    println("cpf ${gui.cpf}")
-    println("salario ${gui.salario}")
-    println("bonificação ${gui.bonificacao}")
-    println("plr ${gui.plr}")
-
-    if (gui.autenticacao(senha = 123)) {
-        println("Autenticado com Sucesso!")
-    } else {
-        println("Falha na Autenticação")
-    }
-
-    val maria = Analista("Maria", cpf = "444.4444.4444-44", salario = 3000.0)
-
-    var calculadora = CalculadoraBonificacao()
-    calculadora.registra(matheus)
-    calculadora.registra(fran)
-    calculadora.registra(gui)
-    calculadora.registra(maria)
-    println("Total Bionificação: ${calculadora.total}")
+    println("\nTransferindo de CC -> Pop")
+    contaCorrente.transfere(100.0, contaPoupanca)
+    println("Saldo Pop(pós transf.): ${contaPoupanca.saldo}")
+    println("Saldo CC(pós transf.): ${contaCorrente.saldo}")
 }
