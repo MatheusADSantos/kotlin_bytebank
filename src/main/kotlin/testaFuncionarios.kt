@@ -1,6 +1,6 @@
 fun testaFuncionarios() {
 
-    val matheus = Funcionario(nome = "Matheus", cpf = "111.111.111-11", salario = 1000.0)
+    val matheus = Analista(nome = "Matheus", cpf = "111.111.111-11", salario = 1000.0)
 
     println("nome ${matheus.nome}")
     println("cpf ${matheus.cpf}")

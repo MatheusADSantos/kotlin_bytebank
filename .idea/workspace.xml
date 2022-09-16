@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="df06b2df-4f43-4f23-a12d-941f8b9a0e42" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Conta.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Conta.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ContaCorrente.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ContaCorrente.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ContaPoupanca.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ContaPoupanca.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/testaFuncionarios.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/testaFuncionarios.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/testaComportamentosConta.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/testaComportamentosConta.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/testaCopiasEReferencias.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/testaCopiasEReferencias.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
