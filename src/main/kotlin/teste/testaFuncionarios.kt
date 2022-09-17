@@ -1,3 +1,8 @@
+import modelo.Analista
+import modelo.CalculadoraBonificacao
+import modelo.Diretor
+import modelo.Gerente
+
 fun testaFuncionarios() {
 
     val matheus = Analista(nome = "Matheus", cpf = "111.111.111-11", salario = 1000.0)

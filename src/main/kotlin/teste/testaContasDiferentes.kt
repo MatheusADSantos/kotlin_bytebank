@@ -1,3 +1,7 @@
+import modelo.ContaCorrente
+import modelo.ContaPoupanca
+import modelo.ContaSalario
+
 fun testaContasDiferentes() {
     val contaPoupanca = ContaPoupanca(titular = "Matheus", numero = 1000)
     val contaCorrente = ContaCorrente(titular = "Ana", numero = 2000)
@@ -31,7 +35,7 @@ fun testaContasDiferentes() {
 
     """
             println("\nTransferindo de CS -> Pop")
-            Não da para transferir, pois, a ContaSalario é herdada de Conta e Conta não tem esse método
+            Não da para transferir, pois, a modelo.ContaSalario é herdada de modelo.Conta e modelo.Conta não tem esse método
             contaSalario.transfere(100.0, contaPoupanca)
     """.trimIndent()
 

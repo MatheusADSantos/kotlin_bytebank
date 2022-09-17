@@ -1,3 +1,5 @@
+package modelo
+
 class ContaCorrente(titular: String, numero: Int) : ContaTransferivel(titular = titular, numero = numero) {
 
     override fun saca(valor: Double) {

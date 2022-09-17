@@ -1,3 +1,8 @@
+import modelo.Cliente
+import modelo.Diretor
+import modelo.Gerente
+import modelo.SistemaInterno
+
 fun testaAutenticacao() {
 
     val gerente = Gerente(nome = "Matheus", cpf = "111.111.111-11", salario = 1000.0, senha = 1000)

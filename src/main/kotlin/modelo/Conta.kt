@@ -1,3 +1,5 @@
+package modelo
+
 open class Conta(
     val titular: String,
     val numero: Int
