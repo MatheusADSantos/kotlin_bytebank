@@ -1,11 +1,24 @@
+import MatheusADSantos.com.github.bytebank.modelo.Cliente
 import MatheusADSantos.com.github.bytebank.modelo.ContaCorrente
 import MatheusADSantos.com.github.bytebank.modelo.ContaPoupanca
 import MatheusADSantos.com.github.bytebank.modelo.ContaSalario
 
 fun testaContasDiferentes() {
-    val contaPoupanca = MatheusADSantos.com.github.bytebank.modelo.ContaPoupanca(titular = "Matheus", numero = 1000)
-    val contaCorrente = MatheusADSantos.com.github.bytebank.modelo.ContaCorrente(titular = "Ana", numero = 2000)
-    val contaSalario = MatheusADSantos.com.github.bytebank.modelo.ContaSalario(titular = "Maria", numero = 3000)
+    val contaPoupanca = MatheusADSantos.com.github.bytebank.modelo.ContaPoupanca(titular = Cliente(
+        nome = "Matheus1",
+        cpf = "777.777.777-77",
+        senha = 123
+    ), numero = 1000)
+    val contaCorrente = MatheusADSantos.com.github.bytebank.modelo.ContaCorrente(titular = Cliente(
+        nome = "Matheus2",
+        cpf = "777.777.777-77",
+        senha = 321
+    ), numero = 2000)
+    val contaSalario = MatheusADSantos.com.github.bytebank.modelo.ContaSalario(titular = Cliente(
+        nome = "Matheus3",
+        cpf = "777.777.777-77",
+        senha = 312
+    ), numero = 3000)
 
     println("\nDepositando nas contas ...")
     contaPoupanca.deposita(1000.0)
