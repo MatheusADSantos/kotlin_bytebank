@@ -1,4 +1,4 @@
-import modelo.ContaCorrente
+import MatheusADSantos.com.github.bytebank.modelo.ContaCorrente
 
 fun testaCopiasEReferencias() {
     val numeroX = 10
@@ -8,8 +8,8 @@ fun testaCopiasEReferencias() {
     println("numeroX $numeroX")
     println("numeroY $numeroY")
 
-    val contaJoao = ContaCorrente("João", 1002)
-    var contaMaria = ContaCorrente("Maria", 1003)
+    val contaJoao = MatheusADSantos.com.github.bytebank.modelo.ContaCorrente("João", 1002)
+    var contaMaria = MatheusADSantos.com.github.bytebank.modelo.ContaCorrente("Maria", 1003)
 
     println("titular conta joao: ${contaJoao.titular}")
     println("titular conta maria: ${contaMaria.titular}")

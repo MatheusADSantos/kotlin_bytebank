@@ -1,4 +1,4 @@
-package modelo
+package MatheusADSantos.com.github.bytebank.modelo
 
 abstract class Funcionario(
     val nome: String,

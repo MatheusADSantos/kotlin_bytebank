@@ -1,4 +1,4 @@
-package modelo
+package MatheusADSantos.com.github.bytebank.modelo
 
 interface Autenticavel {
 

@@ -1,4 +1,4 @@
-package modelo
+package MatheusADSantos.com.github.bytebank.modelo
 
 open class Conta(
     val titular: String,
