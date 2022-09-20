@@ -1,4 +1,5 @@
 import MatheusADSantos.com.github.bytebank.modelo.*
+import MatheusADSantos.com.github.bytebank.modelo.Conta.Companion.totalContas
 
 fun main() {
 

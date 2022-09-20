@@ -1,17 +1,21 @@
 package MatheusADSantos.com.github.bytebank.modelo
 
-var totalContas: Int = 0
-    private set
-
 open class Conta(
     val titular: Cliente,
     val numero: Int
 ) {
+    // Utilizando Object Declaration com companion(Deixando acessível a todo projeto)
+    companion object {
+        var totalContas: Int = 0
+            private set
+    }
+
     var saldo = 0.0
         protected set
 
     init {
         println("Criando Conta ...")
+//        Companion.totalContas++
         totalContas++
     }
 
