@@ -1,9 +1,19 @@
-import MatheusADSantos.com.github.bytebank.modelo.Cliente
-import MatheusADSantos.com.github.bytebank.modelo.ContaCorrente
-import MatheusADSantos.com.github.bytebank.modelo.ContaPoupanca
-import MatheusADSantos.com.github.bytebank.modelo.totalContas
+import MatheusADSantos.com.github.bytebank.modelo.*
 
 fun main() {
+
+//    Utilizando Object Expression
+    val fran = object: Autenticavel {
+        val nome: String = "Fran"
+        val cpf: String = "121.123.124-15"
+        val senha: Int = 123
+
+        override fun autentica(senha: Int): Boolean = this.senha == senha
+    }
+
+    val sistemaInterno = SistemaInterno()
+    sistemaInterno.entra(fran, senha = 123)
+    println("Utilizando o object expression \nTitular: ${fran.nome}")
 
     testaContasDiferentes()
 

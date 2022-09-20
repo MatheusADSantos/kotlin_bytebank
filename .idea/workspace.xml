@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="df06b2df-4f43-4f23-a12d-941f8b9a0e42" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/MatheusADSantos/com/github/bytebank/modelo/Conta.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/MatheusADSantos/com/github/bytebank/modelo/Conta.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
