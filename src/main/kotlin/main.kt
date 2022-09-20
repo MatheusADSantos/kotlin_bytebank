@@ -1,25 +1,44 @@
-import MatheusADSantos.com.github.bytebank.modelo.*
-import MatheusADSantos.com.github.bytebank.modelo.Conta.Companion.totalContas
+import MatheusADSantos.com.github.bytebank.modelo.Cliente
+import MatheusADSantos.com.github.bytebank.modelo.Endereco
 
 fun main() {
 
-//    Utilizando Object Expression
-    val fran = object: Autenticavel {
-        val nome: String = "Fran"
-        val cpf: String = "121.123.124-15"
-        val senha: Int = 123
+    println()
+    println(0)
+    println(3.14)
+    println("Matheus")
+    println(true)
+    println(false)
+    println(Cliente(nome = "Matheus", cpf = "...", senha = 1234))
+    val endereco: Endereco = Endereco()
+    println(endereco)
 
-        override fun autentica(senha: Int): Boolean = this.senha == senha
-    }
+    val objeto: Any = Any()
+    println(objeto)
 
-    val sistemaInterno = SistemaInterno()
-    sistemaInterno.entra(fran, senha = 123)
-    println("Utilizando o object expression \nTitular: ${fran.nome}")
+    val teste: Any = imprime(endereco)
+    println(teste)
 
-    testaContasDiferentes()
+    imprime()
+    imprime(1)
+    imprime(1.0)
+    imprime(endereco)
 
-    val matheus = Cliente(nome = "Matheus", cpf = "", senha = 1)
-    val contaPoupanca = ContaPoupanca(titular = matheus, numero = 1000)
-    val contaCorrente = ContaCorrente(titular = matheus, numero = 1001)
-    println("\n\n=> Total de Contas Criadas: $totalContas")
+}
+
+fun imprime(){
+
+}
+
+fun imprime(valor: Int){
+
+}
+
+fun imprime(valor: Double){
+
+}
+
+fun imprime(valor: Any) : Any{
+    println(valor)
+    return valor
 }
