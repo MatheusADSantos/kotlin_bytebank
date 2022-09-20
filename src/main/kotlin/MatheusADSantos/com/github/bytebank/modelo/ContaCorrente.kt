@@ -1,6 +1,6 @@
 package MatheusADSantos.com.github.bytebank.modelo
 
-class ContaCorrente(titular: Cliente, numero: Int) : MatheusADSantos.com.github.bytebank.modelo.ContaTransferivel(titular = titular, numero = numero) {
+class ContaCorrente(titular: Cliente, numero: Int) : ContaTransferivel(titular = titular, numero = numero) {
 
     override fun saca(valor: Double) {
         if (valor <= saldo) {

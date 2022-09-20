@@ -1,20 +1,28 @@
-import MatheusADSantos.com.github.bytebank.modelo.Cliente
-import MatheusADSantos.com.github.bytebank.modelo.ContaCorrente
-import MatheusADSantos.com.github.bytebank.modelo.ContaPoupanca
-import MatheusADSantos.com.github.bytebank.modelo.ContaSalario
+import MatheusADSantos.com.github.bytebank.modelo.*
+import MatheusADSantos.com.github.bytebank.modelo.ContaPoupanca as ContaPoupanca
+import MatheusADSantos.com.github.bytebank.modelo.ContaPoupanca as ContaCorrente
+import MatheusADSantos.com.github.bytebank.modelo.ContaPoupanca as ContaSalario
 
 fun testaContasDiferentes() {
-    val contaPoupanca = MatheusADSantos.com.github.bytebank.modelo.ContaPoupanca(titular = Cliente(
+    val contaPoupanca = ContaPoupanca(titular = Cliente(
         nome = "Matheus1",
         cpf = "777.777.777-77",
-        senha = 123
+        senha = 123,
+        endereco = Endereco(logradouro = "Rua Francisco Paranhos", numero = 61)
     ), numero = 1000)
-    val contaCorrente = MatheusADSantos.com.github.bytebank.modelo.ContaCorrente(titular = Cliente(
+
+    println("titular")
+    println("titular ${contaPoupanca.titular}")
+    println("nome do titular ${contaPoupanca.titular.nome}")
+    println("cpf do titular ${contaPoupanca.titular.cpf}")
+    println("endereco titular ${contaPoupanca.titular.endereco}")
+
+    val contaCorrente = ContaCorrente(titular = Cliente(
         nome = "Matheus2",
         cpf = "777.777.777-77",
         senha = 321
     ), numero = 2000)
-    val contaSalario = MatheusADSantos.com.github.bytebank.modelo.ContaSalario(titular = Cliente(
+    val contaSalario = ContaSalario(titular = Cliente(
         nome = "Matheus3",
         cpf = "777.777.777-77",
         senha = 312

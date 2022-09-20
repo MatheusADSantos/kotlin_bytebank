@@ -3,11 +3,11 @@ import MatheusADSantos.com.github.bytebank.modelo.ContaCorrente
 
 fun testaComportamentosConta() {
     val matheus = Cliente(nome = "Matheus", cpf = "777.777.777-77", senha = 123)
-    val contaMatheus = MatheusADSantos.com.github.bytebank.modelo.ContaCorrente(matheus, 1000)
+    val contaMatheus = ContaCorrente(matheus, 1000)
     contaMatheus.deposita(200.0)
 
     val fran = Cliente(nome = "Fran", cpf = "888.888.888-88", senha = 321)
-    val contaFran = MatheusADSantos.com.github.bytebank.modelo.ContaCorrente(fran, 1001)
+    val contaFran = ContaCorrente(fran, 1001)
     contaFran.deposita(300.0)
 
 

@@ -1,8 +1,8 @@
 package MatheusADSantos.com.github.bytebank.modelo
 
-abstract class ContaTransferivel(titular: Cliente, numero: Int) : MatheusADSantos.com.github.bytebank.modelo.Conta(titular = titular, numero = numero) {
+abstract class ContaTransferivel(titular: Cliente, numero: Int) : Conta(titular = titular, numero = numero) {
 
-    fun transfere(valor: Double, destino: MatheusADSantos.com.github.bytebank.modelo.Conta): Boolean {
+    fun transfere(valor: Double, destino: Conta): Boolean {
         if (saldo >= valor) {
             saldo -= valor
             destino.deposita(valor)

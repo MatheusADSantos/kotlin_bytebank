@@ -1,5 +1,6 @@
 import MatheusADSantos.com.github.bytebank.modelo.Cliente
 import MatheusADSantos.com.github.bytebank.modelo.ContaCorrente
+import MatheusADSantos.com.github.bytebank.modelo.ContaPoupanca
 
 fun testaCopiasEReferencias() {
     val numeroX = 10
@@ -10,8 +11,8 @@ fun testaCopiasEReferencias() {
     println("numeroY $numeroY")
 
     val joao = Cliente(nome = "João", cpf = "111.111.111-11", senha = 1)
-    val contaJoao = MatheusADSantos.com.github.bytebank.modelo.ContaCorrente(joao, 1002)
-    var contaMaria = MatheusADSantos.com.github.bytebank.modelo.ContaPoupanca(titular = Cliente(
+    val contaJoao = ContaCorrente(joao, 1002)
+    var contaMaria = ContaPoupanca(titular = Cliente(
         nome = "Maria",
         cpf = "222.222.222-22",
         senha = 2

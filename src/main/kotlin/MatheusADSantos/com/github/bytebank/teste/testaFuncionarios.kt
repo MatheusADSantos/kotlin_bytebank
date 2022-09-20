@@ -6,14 +6,14 @@ import MatheusADSantos.com.github.bytebank.modelo.Gerente
 fun testaFuncionarios() {
 
     val matheus =
-        MatheusADSantos.com.github.bytebank.modelo.Analista(nome = "Matheus", cpf = "111.111.111-11", salario = 1000.0)
+        Analista(nome = "Matheus", cpf = "111.111.111-11", salario = 1000.0)
 
     println("nome ${matheus.nome}")
     println("cpf ${matheus.cpf}")
     println("salario ${matheus.salario}")
     println("bonificação ${matheus.bonificacao}")
 
-    val fran = MatheusADSantos.com.github.bytebank.modelo.Gerente(
+    val fran = Gerente(
         nome = "Fran",
         cpf = "222.222.222-22",
         salario = 2000.0,
@@ -31,7 +31,7 @@ fun testaFuncionarios() {
         println("Falha na Autenticação")
     }
 
-    val gui = MatheusADSantos.com.github.bytebank.modelo.Diretor(
+    val gui = Diretor(
         nome = "Gui",
         cpf = "333.333.333-33",
         salario = 4000.0,
@@ -51,9 +51,9 @@ fun testaFuncionarios() {
         println("Falha na Autenticação")
     }
 
-    val maria = MatheusADSantos.com.github.bytebank.modelo.Analista("Maria", cpf = "444.4444.4444-44", salario = 3000.0)
+    val maria = Analista("Maria", cpf = "444.4444.4444-44", salario = 3000.0)
 
-    var calculadora = MatheusADSantos.com.github.bytebank.modelo.CalculadoraBonificacao()
+    var calculadora = CalculadoraBonificacao()
     calculadora.registra(matheus)
     calculadora.registra(fran)
     calculadora.registra(gui)

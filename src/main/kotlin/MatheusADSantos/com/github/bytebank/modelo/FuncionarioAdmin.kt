@@ -5,8 +5,8 @@ abstract class FuncionarioAdmin(
     cpf: String,
     salario: Double,
     val senha: Int
-) : MatheusADSantos.com.github.bytebank.modelo.Funcionario(nome = nome, cpf = cpf, salario = salario),
-    MatheusADSantos.com.github.bytebank.modelo.Autenticavel {
+) : Funcionario(nome = nome, cpf = cpf, salario = salario),
+    Autenticavel {
 
     override fun autentica(senha: Int): Boolean {
         if (this.senha == senha) {
