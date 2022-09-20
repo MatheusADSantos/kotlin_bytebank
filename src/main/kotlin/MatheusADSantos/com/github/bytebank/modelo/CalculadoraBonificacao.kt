@@ -4,8 +4,10 @@ class CalculadoraBonificacao {
 
     var total : Double = 0.0
 
-    fun registra(funcionario: Funcionario) {
-        total += funcionario.bonificacao
+    fun registra(funcionario: Any) {
+        if (funcionario is Funcionario) {
+            total += funcionario.bonificacao
+        }
     }
 
 }
