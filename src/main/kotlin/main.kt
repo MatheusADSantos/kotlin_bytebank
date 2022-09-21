@@ -2,19 +2,24 @@ import MatheusADSantos.com.github.bytebank.modelo.Endereco
 
 fun main() {
 
-    val endereco: Endereco = Endereco(logradouro = "Rua Francisco Paranhos", complemento = "casa")
-    val endereco2: Endereco = Endereco(logradouro = "Rua Osmar de Assis", complemento = "casa")
+    val endereco1: Endereco = Endereco(
+        logradouro = "Rua Francisco Paranhos",
+        complemento = "casa",
+        cep = "000.000.000-00"
+    )
+    val endereco2: Endereco = Endereco(
+        logradouro = "Rua Francisco Paranhos",
+        complemento = "casa",
+        cep = "000.000.000-00"
+    )
 
-    println(endereco.equals(endereco)) // Objetos Iguais
-    println(endereco.equals(endereco2)) // Objetos Diferentes
+    println("\nEndereço1 é igual ao Endereço2: ${endereco1.equals(endereco2)}\n")
 
     // Imprimir o objeto direto ou chamando o método toString() irão retornar a mesma coisa (Classe e o endereço)
-    println(endereco.toString())
+    println(endereco1.toString())
     println(endereco2.toString())
-    println(endereco)
-    println(endereco2)
 
-    println(endereco.hashCode())
+    println(endereco1.hashCode())
     println(endereco2.hashCode())
 
 }
