@@ -1,11 +1,10 @@
-import MatheusADSantos.com.github.bytebank.modelo.Endereco
-import java.lang.NumberFormatException
-
 fun main() {
     println("início main")
-    funcao1()
+    testaComportamentosConta()
     println("fim main")
 }
+
+
 
 fun funcao1(){
     println("início funcao1")

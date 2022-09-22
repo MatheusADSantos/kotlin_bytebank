@@ -14,13 +14,9 @@ open class Conta(
         protected set
 
     init {
-        println("Criando Conta ...")
-//        Companion.totalContas++
-        totalContas++
-    }
-
-    init {
         // Executa algo durante a construção
+        println("Criando Conta ...")
+        totalContas++ // Ou assim -> Companion.totalContas++
     }
 
     fun deposita(valor: Double) {

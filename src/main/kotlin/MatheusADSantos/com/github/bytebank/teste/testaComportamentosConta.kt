@@ -1,3 +1,4 @@
+import MatheusADSantos.com.github.bytebank.exception.SaldoInsuficienteException
 import MatheusADSantos.com.github.bytebank.modelo.Cliente
 import MatheusADSantos.com.github.bytebank.modelo.ContaCorrente
 
@@ -39,10 +40,13 @@ fun testaComportamentosConta() {
 
     println("Transferência da conta da Fran para o Matheus")
 
-    if(contaFran.transfere(300.0, contaMatheus)){
+    try {
+        contaFran.transfere(300.0, contaMatheus)
         println("Transferência sucedida")
-    } else {
+    } catch (e: SaldoInsuficienteException) {
         println("Falha na transferência")
+        println("Saldo Insuficiente")
+        e.printStackTrace()
     }
 
     println(contaFran.saldo)
