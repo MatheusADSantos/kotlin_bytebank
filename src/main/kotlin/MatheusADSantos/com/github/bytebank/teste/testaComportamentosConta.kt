@@ -2,6 +2,7 @@ import MatheusADSantos.com.github.bytebank.exception.FalhaAutenticacaoException
 import MatheusADSantos.com.github.bytebank.exception.SaldoInsuficienteException
 import MatheusADSantos.com.github.bytebank.modelo.Cliente
 import MatheusADSantos.com.github.bytebank.modelo.ContaCorrente
+import java.lang.Exception
 
 fun testaComportamentosConta() {
     val matheus = Cliente(nome = "Matheus", cpf = "777.777.777-77", senha = 123)
@@ -53,6 +54,9 @@ fun testaComportamentosConta() {
     } catch (e: FalhaAutenticacaoException) {
         println("Falha na transferência")
         println("Saldo na Autenticação")
+        e.printStackTrace()
+    } catch (e: Exception) { // Lembrar de sempre deixar o catch da Exception genérica no final!!!
+        println("Erro Desconhecido")
         e.printStackTrace()
     }
 
