@@ -1,6 +1,6 @@
 package MatheusADSantos.com.github.bytebank.modelo
 
-open class Conta(val titular: Cliente, val numero: Int) : Autenticavel {
+abstract class Conta(val titular: Cliente, val numero: Int) : Autenticavel by titular {
     // Utilizando Object Declaration com companion(Deixando acessível a todo projeto)
     companion object {
         var totalContas: Int = 0
@@ -30,8 +30,8 @@ open class Conta(val titular: Cliente, val numero: Int) : Autenticavel {
 
     open fun saca() {}
 
-    override fun autentica(senha: Int): Boolean {
-        return titular.autentica(senha)
-    }
+//    override fun autentica(senha: Int): Boolean {
+//        return titular.autentica(senha)
+//    }
 
 }
