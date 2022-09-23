@@ -1,8 +1,17 @@
 import MatheusADSantos.com.github.bytebank.modelo.Endereco
 
 fun main() {
-    // Nesta situação ao desembrulharmos a val irá gerar uma Execption do tipo NullPointerException
-    val enderecoNulo: Endereco? = null
-    val enderecoNaoNulo: Endereco = enderecoNulo!!
-    enderecoNaoNulo.logradouro
+// Acessando atributo de um objeto → Ex1 MELHOR
+    var endereco: Endereco? = null
+    endereco?.logradouro
+
+// Ex2
+    var endereco2: Endereco? = null
+    if (endereco2 != null) {
+        endereco2.logradouro
+    }
+
+// Ex3 PIOR -> Aqui crasheia o app
+    var endereco3: Endereco? = null
+    endereco3!!.logradouro
 }
