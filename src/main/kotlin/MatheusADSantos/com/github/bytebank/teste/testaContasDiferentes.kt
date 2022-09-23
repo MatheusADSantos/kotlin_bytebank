@@ -45,12 +45,12 @@ fun testaContasDiferentes() {
     println("Saldo CS(pós saque): ${contaSalario.saldo}")
 
     println("\nTransferindo de Pop -> CC")
-    contaPoupanca.transfere(100.0, contaCorrente)
+    contaPoupanca.transfere(100.0, contaCorrente, senha = 123)
     println("Saldo Pop(pós transf.): ${contaPoupanca.saldo}")
     println("Saldo CC(pós transf.): ${contaCorrente.saldo}")
 
     println("\nTransferindo de CC -> Pop")
-    contaCorrente.transfere(100.0, contaPoupanca)
+    contaCorrente.transfere(100.0, contaPoupanca, senha = 123)
     println("Saldo Pop(pós transf.): ${contaPoupanca.saldo}")
     println("Saldo CC(pós transf.): ${contaCorrente.saldo}")
 
