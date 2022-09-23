@@ -13,7 +13,7 @@ abstract class ContaTransferivel(titular: Cliente, numero: Int) : Conta(titular 
         if (!autentica(senha)) {
             throw FalhaAutenticacaoException()
         }
-        throw NumberFormatException()
+//        throw NumberFormatException()
 
         saldo -= valor
         destino.deposita(valor)
