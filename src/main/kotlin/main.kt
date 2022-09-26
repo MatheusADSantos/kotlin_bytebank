@@ -1,17 +1,16 @@
 import MatheusADSantos.com.github.bytebank.modelo.Endereco
 
 fun main() {
-// Acessando atributo de um objeto → Ex1 MELHOR
-    var endereco: Endereco? = null
-    endereco?.logradouro
 
-// Ex2
-    var endereco2: Endereco? = null
-    if (endereco2 != null) {
-        endereco2.logradouro
+    // Safe Call - Com -> '?.let' -> Análoga ao 'if let' do swift
+    var enderecoNulo: Endereco? = Endereco(logradouro = "Rua Francisco Paranhos")
+    val logradouroNovo: String? = enderecoNulo?.logradouro
+    enderecoNulo?.let {
+        println(it.logradouro.length)
     }
 
-// Ex3 PIOR -> Aqui crasheia o app
-    var endereco3: Endereco? = null
-    endereco3!!.logradouro
+    // Chamadas sem o let
+    enderecoNulo?.logradouro?.length
+
+
 }
