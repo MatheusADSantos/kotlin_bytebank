@@ -1,24 +1,22 @@
-import MatheusADSantos.com.github.bytebank.modelo.Endereco
-import kotlin.reflect.typeOf
-
 fun main() {
+    val idades: IntArray = intArrayOf(25, 19, 33, 20, 55, 40)
 
-    // Safe Call - Com -> '?.let' -> Análoga ao 'if let' do swift
-    var enderecoNulo: Endereco? = Endereco(logradouro = "Rua Francisco Paranhos", complemento = "prédio")
-    val logradouroNovo: String? = enderecoNulo?.logradouro
-    enderecoNulo?.let {
-        println(it.logradouro.length)
-        // Testando o Elvis Operator
-        val tamanhoComplemento: Int = it.complemento?.length ?: throw IllegalStateException("Complemento não pode ser vazio")
-        println(tamanhoComplemento)
+//    for in: Método de laço para percorrer um array
+    var maiorIdade = Int.MIN_VALUE
+    for (idade in idades) {
+        if (idade > maiorIdade) {
+            maiorIdade = idade
+        }
     }
+    println(maiorIdade)
 
-    teste("")
-    teste(1)
-}
+//    forEach(): Aqui estamos usando outro método de laço
+    var menorIdade = Int.MAX_VALUE
+    idades.forEach { idade ->
+        if (idade < menorIdade) {
+            menorIdade = idade
+        }
+    }
+    println(menorIdade)
 
-// Testando o Safe Cast - Caso venha algo diferente de um número, retorna null
-fun teste(valor: Any) {
-    val numero: Int? = valor as? Int
-    println(numero)
 }
