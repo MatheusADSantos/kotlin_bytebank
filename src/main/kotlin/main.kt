@@ -2,38 +2,37 @@ import MatheusADSantos.com.github.bytebank.teste.testaExpressao
 
 fun main() {
 
-//    testaTipoFuncaoReferencia()
-//    testaTipoFuncaoClasse()
+    testaTipoFuncaoReferencia()
+    testaTipoFuncaoClasse()
 
-    val minhaFuncaoLambda: () -> Unit = {
-        println("Executa como LAMBDA")
-    }
-    println(minhaFuncaoLambda())
-
-    val minhaFuncaoAnonima: () -> Unit = fun() {
-        println("Executa como ANONIMA")
-    }
-    println(minhaFuncaoAnonima())
+//    val minhaFuncaoLambda: () -> Unit = {
+//        println("Executa como LAMBDA")
+//    }
+//    println(minhaFuncaoLambda())
+//
+//    val minhaFuncaoAnonima: () -> Unit = fun() {
+//        println("Executa como ANONIMA")
+//    }
+//    println(minhaFuncaoAnonima())
 
 }
 
 private fun testaTipoFuncaoClasse() {
-    val minhaFuncaoClasse = ::Teste
-    println(minhaFuncaoClasse())
+    val minhaFuncaoClasse: (Int, Int) -> Int = Soma()
+    println(minhaFuncaoClasse(5, 20))
 }
 
 private fun testaTipoFuncaoReferencia() {
-    val minhaFuncao = ::teste
-    println(minhaFuncao())
+    val minhaFuncao: (Int, Int) -> Int = ::soma
+    println(minhaFuncao(5, 10))
 }
 
-fun teste() {
-    println("Executa teste")
+fun soma(a: Int, b: Int): Int {
+    return a + b
 }
 
-class Teste {
-    operator fun invoke() {
-        println("Executa invoke do Teste")
-    }
+class Soma : (Int, Int) -> Int {
+    override fun invoke(a: Int,  b: Int): Int = a + b
+
 
 }
