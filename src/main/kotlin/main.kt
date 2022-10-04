@@ -1,22 +1,30 @@
 import MatheusADSantos.com.github.bytebank.modelo.Endereco
 
 fun main() {
-    val testaFuncao: () -> Unit
-    Endereco().let {
-        it
-    }
-    "".let {
-        it
-    }
-    teste (1, {})
+    val endereco: Endereco = Endereco(complemento = "casa", logradouro = "Rua Francisco Paranhos", numero = 61)
+//    val enderecoEmMaiusculo = "${endereco.logradouro}, ${endereco.numero}".toUpperCase()
+//    println(enderecoEmMaiusculo)
 
-}
 
-fun testeRecebeString(valor: String){
+    endereco
+        .let {
+            println(it.logradouro.uppercase())
+        }
 
-}
+    Endereco(complemento = "casa", logradouro = "Rua Francisco Paranhos", numero = 61)
+        .let { endereco ->
+            "${endereco.logradouro}, ${endereco.numero}".toUpperCase()
+        }.let(::println)
 
-//higher order function
-fun teste(teste: Int, bloco: () -> Unit) {
+
+    listOf(
+        Endereco(),
+        Endereco(complemento = "casa"),
+        Endereco(complemento = "Apartamento"),
+        Endereco()
+    )
+        .filter { endereco -> endereco.complemento.isNotEmpty() }
+        .let(::println)
+
 
 }
