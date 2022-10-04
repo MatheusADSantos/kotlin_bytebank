@@ -2,18 +2,20 @@ import MatheusADSantos.com.github.bytebank.teste.testaExpressao
 
 fun main() {
 
-    testaTipoFuncaoReferencia()
-    testaTipoFuncaoClasse()
+//    testaTipoFuncaoReferencia()
+//    testaTipoFuncaoClasse()
 
-//    val minhaFuncaoLambda: () -> Unit = {
-//        println("Executa como LAMBDA")
-//    }
-//    println(minhaFuncaoLambda())
-//
-//    val minhaFuncaoAnonima: () -> Unit = fun() {
-//        println("Executa como ANONIMA")
-//    }
-//    println(minhaFuncaoAnonima())
+    val minhaFuncaoLambda = { a: Int, b: Int -> Int
+        println("Executa como LAMBDA")
+        a + b
+    }
+    println(minhaFuncaoLambda(20, 15))
+
+    val minhaFuncaoAnonima= fun(a: Int, b: Int): Int {
+        println("Executa como ANONIMA")
+        return a + b
+    }
+    println(minhaFuncaoAnonima(10, 20))
 
 }
 
