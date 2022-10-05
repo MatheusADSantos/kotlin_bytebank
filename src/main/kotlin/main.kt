@@ -15,9 +15,11 @@ fun main() {
 
     Endereco(complemento = "casa", logradouro = "Rua Francisco Paranhos", numero = 61)
 //            Utilizando Função de Escopo (apply) que traz objeto receiver como this
-        .apply {
+        .run {
             "$logradouro, $numero".toUpperCase()
-        }.let(::println)
+        }.let { enderecoEmMaiusculo: String ->
+            println(enderecoEmMaiusculo)
+        }
 
 
     listOf(
