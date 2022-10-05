@@ -14,8 +14,9 @@ fun main() {
         }
 
     Endereco(complemento = "casa", logradouro = "Rua Francisco Paranhos", numero = 61)
-        .let { endereco ->
-            "${endereco.logradouro}, ${endereco.numero}".toUpperCase()
+//            Utilizando Função de Escopo (apply) que traz objeto receiver como this
+        .apply {
+            "$logradouro, $numero".toUpperCase()
         }.let(::println)
 
 
