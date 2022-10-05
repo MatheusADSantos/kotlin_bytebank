@@ -1,13 +1,13 @@
 package MatheusADSantos.com.github.bytebank.modelo
 
 class Endereco(
-    val logradouro: String = "",
-    val numero: Int = 0,
-    val bairro: String = "",
-    val cidade: String = "",
-    val estado: String = "",
-    val cep: String = "",
-    val complemento: String = ""
+    var logradouro: String = "",
+    var numero: Int = 0,
+    var bairro: String = "",
+    var cidade: String = "",
+    var estado: String = "",
+    var cep: String = "",
+    var complemento: String = ""
 ) {
 
     override fun toString(): String {

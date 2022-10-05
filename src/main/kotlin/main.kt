@@ -3,21 +3,25 @@ import MatheusADSantos.com.github.bytebank.modelo.Endereco
 import MatheusADSantos.com.github.bytebank.modelo.SistemaInterno
 
 fun main() {
-    val endereco: Endereco = Endereco(complemento = "casa", logradouro = "Rua Francisco Paranhos", numero = 61)
+//    val endereco: Endereco = Endereco(complemento = "casa", logradouro = "Rua Francisco Paranhos", numero = 61)
 //    val enderecoEmMaiusculo = "${endereco.logradouro}, ${endereco.numero}".toUpperCase()
 //    println(enderecoEmMaiusculo)
 
+    run {
+        println("Executando o run sem extensão")
+    }
 
-    endereco
-        .let {
-            println(it.logradouro.uppercase())
+    val endereco = Endereco()
+        .also { println("Criando Endereço") }
+        .apply {
+            complemento = "casa"
+            logradouro = "Rua Francisco Paranhos"
+            numero = 61
         }
 
-    Endereco(complemento = "casa", logradouro = "Rua Francisco Paranhos", numero = 61)
-//            Utilizando Função de Escopo (apply) que traz objeto receiver como this
-        .run {
-            "$logradouro, $numero".toUpperCase()
-        }.let { enderecoEmMaiusculo: String ->
+    with(endereco) {
+        "$logradouro, $numero".toUpperCase()
+    }.let { enderecoEmMaiusculo: String ->
             println(enderecoEmMaiusculo)
         }
 
