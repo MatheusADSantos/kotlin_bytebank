@@ -1,11 +1,18 @@
 import MatheusADSantos.com.github.bytebank.modelo.*
+import MatheusADSantos.com.github.bytebank.teste.testaHOF
 
 fun main() {
 //    testaWith()
+//    testaRun()
 
+    testaHOF()
+
+}
+
+fun testaRun() {
     val taxaAnual = 0.05
     val taxaMensal = taxaAnual / 12
-    val contaPoupanca = ContaPoupanca(Cliente(nome = "Matheus Augusto",cpf = "111.111.111-11", senha = 1234), 1000)
+    val contaPoupanca = ContaPoupanca(Cliente(nome = "Matheus Augusto", cpf = "111.111.111-11", senha = 1234), 1000)
 
     contaPoupanca.run {
         deposita(1000.0)
@@ -22,9 +29,6 @@ fun main() {
         saldo
     }
     println("Simulação do Rendimento Anual: $rendimentoAnual")
-
-
-
 }
 
 fun testaWith() {
